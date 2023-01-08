@@ -35,7 +35,7 @@ def extract_featues(output):
         # If the value cannot be converted to an integer, set it to a default value of 10
         obj = 10
         tuples.append(obj)
-                pass
+         pass
 
     # Extract the number of 'stream' keywords
     stream_subsection = bytes(output[4])
