@@ -38,4 +38,16 @@ print("Accuracy:", acs)
 print("\nConfusion Matrix:\n", cm)
 print("Prediction",y_pred)
 print(classification_report(y_test, y_pred))
+# print the precision, recall, and f1-score for each class
+print("Precision:", precision)
+print("Recall:", recall)
+print("F1-score:", f1)
+counts = {'yes': 0, 'no': 0}
 
+# loop through the labels
+for label in y:
+  counts[label] += 1
+
+# print the counts
+print('Number of malicious samples:', counts['yes'])
+print('Number of non-malicious samples:', counts['no'])
