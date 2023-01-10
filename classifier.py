@@ -10,7 +10,7 @@ from sklearn.metrics import precision_score
 from feature_extraction import feature_extraction
 
 # read the csv file and store the data in a Pandas DataFrame
-df = read_csv('pdfdataset_n.csv')
+df = read_csv('PDFMal.csv')
 
 # assign the features (columns 0-20) to X and the target (column 21) to y
 X = df.iloc[:, 0: 21]
@@ -39,14 +39,3 @@ print("\nConfusion Matrix:\n", cm)
 print("Prediction",y_pred)
 print(classification_report(y_test, y_pred))
 
-# specify the path to the PDF file to be classified
-path = '/Users/hakim/Desktop/.review1 2.pdf'
-
-# extract features from the PDF file
-features = feature_extraction(path)
-
-# use the trained model to classify the PDF file
-result = clf.predict(features)
-
-# print the classification result
-print(result)
